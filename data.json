@@ -1,0 +1,57 @@
+{
+    "info": {
+        "name": "COMSC-200",
+        "section": "5047",
+        "credit": "4"
+    },
+    "module1": {
+        "module": "1",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Wednesday 6/17 midnight"
+    },
+    "module2": {
+        "module": "2",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module3": {
+        "module": "3",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module4": {
+        "module": "4",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module5": {
+        "module": "5",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module6": {
+        "module": "6",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module7": {
+        "module": "7",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module8": {
+        "module": "8",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module9": {
+        "module": "9",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    },
+    "module10": {
+        "module": "10",
+        "last": "Sunday 6/21 midnight",
+        "assignment": "Sunday 6/21 midnight"
+    }
+}
