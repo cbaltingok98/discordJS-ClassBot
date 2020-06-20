@@ -63,7 +63,10 @@ client.on('message', message => {
                     work = true;
                     break;
                 case 3:
-                    message.reply('This module is unpublished!');
+                    module = data.module3.module
+                    closes = data.module3.last;
+                    due = data.module3.assignment;
+                    work = true;
                     break;
                 case 4:
                     message.reply('This module is unpublished!');
