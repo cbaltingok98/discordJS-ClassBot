@@ -4,7 +4,7 @@ const {prefix, token} = require('./config.json');
 const data = require('./data.json');
 
 client.on('ready', () => {
-    console.log('BerkBot is online!');
+    console.log('ClassBot is online!');
 });
 
 client.on('guildMemberAdd', member => {
@@ -41,76 +41,29 @@ client.on('message', message => {
             return message.channel.send(classEmbed);
         }
         if(args[0] === 'module'){
+            
             if(!args[1]){
                 return message.reply('Please specify a module. Exp: !class module 1');
             }
-            let module;
-            let closes;
-            let due;
-            let work = false;
 
-            switch(parseInt(args[1])){
-                case 1:
-                    module = data.module1.module;
-                    closes = data.module1.last;
-                    due = data.module1.assignment;
-                    work = true;
-                    break;
-                case 2:
-                    module = data.module2.module
-                    closes = data.module2.last;
-                    due = data.module2.assignment;
-                    work = true;
-                    break;
-                case 3:
-                    module = data.module3.module
-                    closes = data.module3.last;
-                    due = data.module3.assignment;
-                    work = true;
-                    break;
-                case 4:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 5:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 6:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 7:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 8:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 9:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 10:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 11:
-                    message.reply('This module is unpublished!');
-                    break;
-                case 12:
-                    message.reply('This module is unpublished!');
-                    break;
-                default:
-                    message.reply(`Module: ${args[0]} not found!`);
-                    break;
-            }
-            if(work){
+            let module = parseInt(args[1]);
+
+            if(module > 0 && module < 5)
+            {
                 const moduleEmbed = new Discord.MessageEmbed()
                 .setColor('#ff0000')
                 .setTitle('Class Info')
                 .addFields(
-                    { name: 'Module', value: module },
-                    { name: 'Closes on', value: closes },
-                    { name: 'Assignment due', value: due }
+                    { name: 'Module', value: data.modules[module - 1].module },
+                    { name: 'Module Closes on', value: data.modules[module - 1].last },
+                    { name: 'Assignment due', value: data.modules[module - 1].assignment }
                 );
                 message.reply('Here you go :)');
                 message.channel.send(moduleEmbed);
+            } else {
+                message.reply(`Module: ${module} not found/published!`);
             }
+
         } else {
             message.reply(`Invalid Argument: ${args[0]}`);
         }
